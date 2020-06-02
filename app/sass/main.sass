@@ -1,0 +1,1175 @@
+@import "vars"
+@import "libs"
+@import "fonts"
+
+/*  ---  Мои стили для проекта  ---  */
+
+::placeholder
+  color: #66449b
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html
+  overflow-x: hidden
+  box-sizing: border-box
+
+*, ::before, ::after
+  box-sizing: inherit
+  
+body
+  position: relative
+  min-width: 320px
+  overflow: hidden
+  font-family: $font-default
+  font-size: 16px
+  line-height: 1.4
+  color: $text
+  
+  input, textarea
+    border: #666 1px solid
+    outline: none
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+b, strong
+  font-weight: bold
+
+.btn
+  padding: 18px 40px
+  font-size: 20px
+  font-weight: 700
+  color: #ffffff
+  text-transform: uppercase
+  line-height: 1
+  background-color: $accent
+  border: none
+  border-radius: 30px
+  transition: $slowdown
+  box-shadow: 0 8px 15px 5px rgba($accent, 0.3)
+  cursor: pointer
+  
+  &:hover
+    color: #ffffff
+    text-decoration: none
+    background-color: darken($accent, 10%)
+    
+
+.link-btn
+  display: block
+  width: 250px
+  margin: 0 auto
+  
+  &:hover
+    color: #ffffff
+    text-decoration: none
+  
+.no-btn
+  padding: 0
+  background: none
+  border: none
+  &:active, &:focus
+    outline: none
+  
+.lst
+  margin: 0
+  padding: 0
+  list-style: none
+  
+.container-relative
+  position: relative
+  height: 100%
+  
+.container-w100
+  padding: 0
+
+h1, h2, h3, h4
+  font-family: $font-accent
+  line-height: 1.2
+
+.title-text
+  margin-bottom: 0
+  font-size: 24px
+  font-weight: 700
+  text-align: center
+  text-transform: uppercase
+  text-shadow: 2px 2px 1px #b9671f
+  line-height: 1.2
+
+.text-accent
+  color: $accent
+
+.text-bold
+  font-family: $font-bold
+  
+.text-black
+  font-weight: 900
+
+.text-roboto
+  font-family: $roboto
+  font-weight: 700
+
+.text-up
+  text-transform: uppercase
+  
+.text-nowrap
+  white-space: nowrap
+
+/* wrappers */
+@keyframes zoom-circle
+  0%
+    transform: translateX(-100%) scale(0) 
+    opacity: 1
+  5%
+    transform: translateX(-100%) scale(0.1) 
+    opacity: 1
+  100%
+    transform: translateX(-100%) scale(1) 
+    opacity: 0
+
+
+.main-wrap
+  position: relative
+  background: #d72c93
+  background: linear-gradient(130deg, #d72c93 0, #f3b940 50%, #d8a231)
+
+  &__ball
+    position: absolute
+    left: 50%
+    top: 0
+    width: 325px
+    height: 550px
+    background-image: url(../img/ball.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    transform: translateX(-50%)
+
+  &__circle
+    position: absolute
+    background-color: rgba(#ffffff, 0.1)
+    border-radius: 50%
+    animation-name: zoom-circle
+    animation-duration: 3s
+    animation-iteration-count: infinite
+    animation-play-state: running
+    animation-timing-function: easy-out
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 60%
+      height: 60%
+      border-radius: 50%
+      background-color: rgba(#ffffff, 0.2)
+      transform: translate(-50%, -50%)
+      transform-origin: center center
+    
+    &_top
+      top: 0%
+      left: 50%
+      width: 1000px
+      height: 1000px
+      transform: translateX(-100%)
+
+    &_middle
+      top: 40%
+      left: 100%
+      width: 1000px
+      height: 1000px
+      transform: translateX(-100%)
+
+    &_bottom
+      bottom: 0
+      left: 50%
+      width: 800px
+      height: 800px
+      background-color: rgba(#ffffff, 0)
+      border: 5px solid rgba(#ffffff, 0.4)
+      transform: translateX(-100%)
+
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 60%
+        height: 60%
+        border-radius: 50%
+        background-color: rgba(#ffffff, 0)
+        border: 5px solid rgba(#ffffff, 0.5)
+        transform: translate(-50%, -50%)
+
+/* header */
+.header
+  position: relative
+  z-index: 10
+  padding-top: 40px
+
+  &__line
+    display: flex
+    justify-content: center
+    
+  &__logo
+    padding-bottom: 20px
+
+
+/* top */
+.top
+  position: relative
+
+  &__point
+    position: absolute
+    z-index: 10
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    background-color: rgba(#ffffff, 0.3)
+    
+    &_big
+      width: 12px
+      height: 12px
+    &_1
+      top: -50px
+      left: -50px
+    &_2
+      top: 50px
+      left: -100px
+    &_3
+      top: 200px
+      left: -40px
+    &_4
+      bottom: -100px
+      left: -50px
+    &_5
+      top: -70px
+      left: 120px
+    &_6
+      top: -70px
+      left: 120px
+    &_7
+      top: -60px
+      left: 140px
+    &_8
+      top: 50%
+      left: 50%
+    &_9
+      top: 45%
+      left: 55%
+    &_10
+      top: -70px
+      left: 100%
+    &_11
+      top: 70px
+      left: 110%
+    &_12
+      top: 300px
+      left: 105%
+    &_13
+      top: -40px
+      left: 30%
+    &_14
+      top: 400px
+      left: 25%
+    &_15
+      top: 240px
+      left: 57%
+      background-color: rgba(#ffffff, 0.6)
+    &_16
+      bottom: 50px
+      right: 5%
+      background-color: rgba(#ffffff, 0.8)
+
+  &__zigzag
+    position: absolute
+    width: 60px
+    height: 60px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+
+    &_1
+      left: 40px
+      top: -50px
+      background-image: url(../img/icons/zigzag1.png)
+
+    &_2
+      left: 45%
+      top: 250px
+      background-image: url(../img/icons/zigzag1.png)
+      transform: rotate(-70deg)
+
+    &_3
+      right: 50px
+      top: 20px
+      z-index: 10
+      width: 30px
+      height: 35px
+      background-image: url(../img/icons/zigzag1.png)
+      transform: rotate(90deg)
+
+    &_4
+      top: 270px
+      left: 20px
+      background-image: url(../img/icons/zigzag2.png)
+
+    &_5
+      top: 120px
+      right: 10px
+      z-index: 10
+      width: 70px
+      height: 70px
+      background-image: url(../img/icons/zigzag2.png)
+      transform: rotate(90deg)
+
+  &__star
+    position: absolute
+    width: 30px
+    height: 30px
+    z-index: 10
+
+    &_1
+      top: 50%
+      left: 0
+      width: 20px
+      height: 20px
+      background-image: url(../img/icons/star.svg)
+
+    &_2
+      top: 30%
+      left: 56%
+      background-image: url(../img/icons/star.svg)
+    
+    &_3
+      bottom: 20%
+      right: -50px
+      background-image: url(../img/icons/star.svg)
+
+    &_4
+      top: 50%
+      right: 0
+      width: 50px
+      height: 50px
+      background-image: url(../img/icons/star.svg)
+      opacity: 0.5
+
+    &_5
+      top: -40px
+      right: 20px
+      background-image: url(../img/icons/star-violet.svg)
+      transform: rotate(-20deg)
+    
+    &_6
+      top: 55%
+      left: -40px
+      background-image: url(../img/icons/star-violet.svg)
+      opacity: 0.8
+      transform: rotate(-20deg)
+
+    &_7
+      bottom: -10px
+      left: -40px
+      width: 70px
+      height: 70px
+      background-image: url(../img/icons/star-gold.svg)
+
+    &_8
+      bottom: 20px
+      left: 45%
+      width: 55px
+      height: 55px
+      background-image: url(../img/icons/star-gold.svg)
+      transform: rotate(120deg)
+
+  &__box-shadows
+    position: absolute
+    right: 5%
+    bottom: 0
+    width: 410px
+    height: 580px
+
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      z-index: 0
+      height: 40%
+      width: 20%
+      background-color: #ecb136
+      box-shadow: 0 0 600px 250px #ecb136
+      transform: translate(-50%, -50%) 
+
+  &__image
+    position: relative
+    z-index: 2
+    width: 100%
+    height: 100%
+
+.promo
+  position: relative
+  z-index: 10
+  text-align: center
+  
+  &__subtitle
+    margin-bottom: 30px
+    font-family: $font-accent
+    font-size: 30px
+    line-height: 1
+    text-shadow: 2px 2px 2px rgba(0,0,0, 0.25)
+
+    &_big
+      font-size: 36px
+
+  &__title
+    margin-bottom: 10px
+    font-size: 26px
+    line-height: 1
+    text-shadow: 2px 2px 2px rgba(0,0,0, 0.25)
+
+    &_big
+      font-size: 70px
+
+    &_middle
+      font-size: 42px
+
+  &__list
+    display: flex
+    flex-direction: column
+    width: 280px
+    margin: 40px auto
+    text-align: left
+
+  &__item
+    position: relative
+    margin-bottom: 15px
+    padding-left: 28px
+    font-family: $font-bold
+    font-size: 18px
+    text-transform: uppercase
+    line-height: 1.2
+
+    &::before
+      content: ''
+      position: absolute
+      top: 1px
+      left: 0
+      height: 18px
+      width: 18px
+      background-image: url(../img/icons/check-mark.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+
+/* contact-form */
+.contact-form
+  position: relative
+  z-index: 10
+  padding-bottom: 30px
+
+  &__box-shadows
+    display: none
+
+  &__wrap
+    padding: 40px 50px
+    background-color: $orange
+    border-radius: 50px
+    box-shadow: 0 0 20px 5px rgba($accent, 0.4)
+
+  &__title
+    margin-bottom: 25px
+    font-family: $font-bold
+    font-size: 24px
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 1px
+
+  &__promo-time
+    margin-top: 10px
+    font-size: 24px
+    text-transform: uppercase
+    letter-spacing: 4px
+    text-align: center
+
+  &__date
+    animation-duration: 2s
+    animation-iteration-count: infinite
+
+  &__main-prize
+    margin-top: 40px
+    margin-bottom: 0
+    font-family: $font-accent
+    font-size: 36px
+    line-height: 1
+    text-transform: uppercase
+    text-align: center
+    text-shadow: 2px 2px 2px rgba(0,0,0, 0.25)
+    animation-duration: 2s
+    animation-iteration-count: infinite
+
+.form
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &_modal
+      display: flex
+      flex-direction: column
+
+  &__field
+    width: calc(25% - 20px)
+    margin-bottom: 10px
+    margin-right: 20px
+    padding: 15px 30px 17px
+    font-size: 20px
+    line-height: 1
+    color: #66449b
+    background-color: #ffffff
+    border: none
+    border-radius: 30px
+
+    &_modal
+      width: 100%
+      margin-right: 0
+  
+  &__btn
+    width: 25%
+    margin-bottom: 10px
+
+    &_modal
+      width: 100%
+      margin-right: 0
+      margin-top: 10px
+      margin-bottom: 0
+
+/* variants */
+@keyframes rotate-tinsel
+  0%
+    transform: translate(-50%, -50%) scale(1) rotate(0deg)
+  50%
+    transform: translate(-50%, -50%) scale(2) rotate(180deg)  
+  100%
+    transform: translate(-50%, -50%) scale(1) rotate(360deg)
+
+.variants
+  padding: 30px 0
+
+  &__subtitle
+    margin-top: 20px
+    font-family: $font-bold
+    font-size: 24px
+    text-transform: uppercase
+    line-height: 1.1
+    text-align: center
+
+    br:nth-child(2)
+      display: none
+
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 40px
+    margin-bottom: 30px
+
+  &__item
+    position: relative
+    z-index: 2
+    width: 265px
+    margin-bottom: 320px
+
+    &:hover
+      .img-character
+        transform: scale(1.2)
+        &_4
+          transform: scale(1.1)
+          
+      .variants__head-wrap
+        &::before
+          animation-play-state: running
+
+  &__head
+    position: relative
+    z-index: 3
+
+    .img-character
+      position: absolute
+      z-index: 1
+      transition: transform 0.3s ease
+
+      &_1
+        bottom: 15px
+        right: 5px
+
+      &_2
+        bottom: 5px
+        left: -20px
+
+      &_3
+        bottom: 5px
+        right: -25px
+
+      &_4
+        bottom: 0
+        left: 0
+        transform-origin: center bottom
+
+    &-wrap
+      position: relative
+      z-index: 1
+      overflow: hidden
+      height: 255px
+      box-shadow: 0 0 12px 4px rgba($accent, 0.3)
+      border-top-left-radius: 50px
+      border-top-right-radius: 50px
+
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 376px
+        height: 294px
+        background-image: url(../img/variants/bg__points.png)
+        transform: translate(-50%, -50%)
+        animation-name: rotate-tinsel
+        animation-duration: 2s
+        animation-iteration-count: infinite
+        animation-play-state: paused
+        animation-timing-function: linear
+
+      .img-name
+        position: absolute
+
+      &_1
+        background-color: #df8a20
+        .img-name
+          left: 15px
+          bottom: 15px
+
+      &_2
+        background-color: #1574b6
+        .img-name
+          right: 10px
+          top: 10px
+      &_3
+        background-color: #8c2d9b
+        .img-name
+          left: 15px
+          bottom: 20px
+
+      &_4
+        background-color: #b5aed8
+        .img-name
+          right: 10px
+          bottom: 20px
+
+  &__body
+    position: absolute
+    z-index: 2
+    display: flex
+    flex-direction: column
+    width: 100%
+    min-height: 285px
+    padding: 25px 15px
+    text-align: center
+    background-color: #ffffff
+    box-shadow: 0 0 12px 4px rgba($accent, 0.3)
+    border-bottom-left-radius: 50px
+    border-bottom-right-radius: 50px
+
+    &_1
+      color: #df8a20
+    &_2
+      color: #1574b6
+    &_3
+      color: #8c2d9b
+    &_4
+      color: #5e4697
+
+  &__name
+    font-family: $font-accent
+    font-size: 30px
+    text-transform: uppercase
+  
+  &__text
+    color: #4f4f4f
+    line-height: 1.2
+
+  &__table
+    display: flex
+    flex-direction: column
+    color: #4f4f4f
+
+  &__detailed
+    margin-bottom: 5px
+    padding: 10px
+    font-family: $font-bold
+    font-size: 16px
+    color: inherit
+    transition: $slowdown
+
+    &:hover
+      opacity: 0.7
+
+  &__price
+    margin-top: auto
+    margin-bottom: 10px
+    font-family: $font-accent
+    font-size: 24px
+    line-height: 1
+
+    &_child
+      font-family: $font-default
+      font-size: 18px
+      color: #4f4f4f
+
+  &__weekend
+    display: block
+    font-family: $font-default
+    font-size: 14px
+    color: #4f4f4f
+
+  &__btn
+    width: 80%
+    margin: 0 auto
+    margin-bottom: -50px
+    font-size: 16px
+
+  &__saving
+    position: absolute
+    left: 50%
+    bottom: -65px
+    width: 100%
+    font-family: $font-accent
+    font-size: 18px
+    text-transform: uppercase
+    color: #ffffff
+    transform: translateX(-50%)
+  
+
+/* advantages */
+.advantages
+  padding-top: 30px
+  padding-bottom: 70px
+
+  &__list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 70px
+    margin-bottom: 40px
+
+  &__item
+    width: 320px
+    margin-bottom: 25px
+
+  &__image
+    margin-bottom: 20px
+    overflow: hidden
+    border: 10px solid #ffffff
+    border-radius: 50px
+
+    img
+      object-fit: cover
+      transition: $slowdown
+
+    &:hover
+      img
+        transform: scale(1.2)
+  &__title
+    margin-bottom: 0
+    font-family: $font-default
+    font-size: 18px
+    text-align: center
+    line-height: 1.2
+
+  &__subtitle
+    margin-bottom: 0
+    font-size: 30px
+    text-transform: uppercase
+    line-height: 1.2
+    text-align: center
+
+  &__btn
+    display: block
+    margin: 0 auto
+    margin-top: 50px
+
+/* parks */
+.parks
+  position: relative
+  z-index: 5
+  padding: 65px 0
+
+  &__title-text
+    color: $accent
+    text-shadow: none
+
+  &__wrap
+    margin-top: 50px
+
+  &__item
+    display: flex
+    flex-direction: column
+
+  &__image
+    overflow: hidden
+    border-radius: 40px
+
+  &__content
+    padding: 20px 10px
+    font-size: 18px
+    line-height: 1
+    text-align: center
+
+  &__title
+    margin-bottom: 0
+    font-family: $font-accent
+    color: #43acdf
+    text-transform: uppercase
+
+  &__address
+    margin-bottom: 0
+    color: #888888
+
+  .swiper
+    &-wrapper
+      margin-bottom: 40px
+
+    &-button-next, &-button-prev
+      display: block
+      top: auto
+      bottom: 0
+      width: 40px
+      height: 40px
+      background: none
+
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 40px
+        height: 40px
+        background-image: url(../img/icons/right-arrow.svg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        transform: translate(-50%, -50%) 
+
+    &-button-prev
+      left: 44%
+      &::before
+        transform: translate(-50%, -50%) rotate(180deg)
+        
+    &-button-next
+      right: 43%
+
+    &-button-disabled
+      opacity: 0.2
+
+/* bottom */
+.bottom-wrap
+  position: relative
+  background: #f3b940
+  background: linear-gradient(330deg, #d72c93 0, #f3b940 50%, #f7a317)
+
+  &__circle
+    position: absolute
+    top: -450px
+    left: 100%
+    z-index: 3
+    width: 1000px
+    height: 1000px
+    background-color: rgba(#ffffff, 0.2)
+    border-radius: 50%
+    animation-name: zoom-circle
+    animation-duration: 3s
+    animation-iteration-count: infinite
+    animation-play-state: running
+    animation-timing-function: easy-out
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 60%
+      height: 60%
+      border-radius: 50%
+      background-color: rgba(#ffffff, 0.3)
+      transform: translate(-50%, -50%)
+      transform-origin: center center
+
+.bottom
+  position: relative
+  padding-top: 200px
+  text-align: center
+  line-height: 1
+  overflow: hidden
+
+  &__box-shadows
+    position: absolute
+    left: -15%
+    top: -400px
+    bottom: 0
+
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      z-index: 1
+      height: 40%
+      width: 20%
+      background-color: #ecb136
+      box-shadow: 0 0 600px 250px #ecb136
+      transform: translate(-50%, -50%) 
+
+  &__image
+    position: relative
+    z-index: 2
+    width: 100%
+    height: 100%
+
+  &__wrap
+    position: relative
+    z-index: 2
+
+  &__title
+    margin-bottom: 50px
+    font-family: $font-accent
+    font-size: 33px
+    text-transform: uppercase
+    text-shadow: 2px 2px 2px rgba(0,0,0, 0.25)
+
+  &__subtitle
+    margin-bottom: 40px
+    font-family: $font-accent
+    font-size: 24px
+    text-transform: uppercase
+    text-shadow: 2px 2px 2px rgba(0,0,0, 0.25)
+
+/* attention */
+.attention
+  padding: 25px 0
+  background-color: rgba(#ffffff, 0.15)
+  
+  &__wrap
+    font-family: $roboto
+    line-height: 1.1
+    text-align: center
+
+  &__title
+    margin-bottom: 20px
+    font-size: 30px
+    font-weight: 300
+    font-family: $roboto
+    text-transform: uppercase
+
+  &__text
+    margin-bottom: 0
+    font-size: 24px
+    font-weight: 300
+
+/* footer */
+.footer
+  padding: 40px 0
+  font-family: $roboto
+  font-size: 16px
+  text-align: center
+  line-height: 1.2
+
+  &__wrap
+    p
+      margin-bottom: 0
+    a
+      margin-bottom: 0
+      color: #ffffff
+      transition: $slowdown
+
+      &:hover
+        color: darken(#ffffff, 20%)
+
+/* section modal */
+.section-modal
+  
+.overlay
+  display: block
+  position: fixed
+  top: 50%
+  left: 50%
+  z-index: 200
+  width: 100vw
+  height: 100vh
+  background: #d72c93
+  background: linear-gradient(130deg, #d72c93 0, #f3b940 100%)
+  transform: translate(-50%, -50%)
+
+.modal
+  &__close
+    position: fixed
+    top: 40px
+    right: 40px
+    z-index: 301
+    width: 50px
+    height: 50px
+    background-image: url(../img/icons/close.svg)
+    cursor: pointer
+
+  &__decor
+    position: absolute
+    background-repeat: no-repeat
+    background-position: center
+
+  
+  &__point
+    width: 12px
+    height: 12px
+    background-color: rgba(#ffffff, 0.5)
+    border-radius: 50%
+
+    &_1
+      top: 5%
+      left: 5%
+    &_2
+      top: 30%
+      left: 10%
+    &_3
+      bottom: 10%
+      left: 20%
+    &_4
+      right: 10%
+      top: 5%
+    &_5
+      right: 5%
+      top: 50%
+    &_6
+      right: 15%
+      bottom: 10%
+
+  &__zigzag
+    width: 50px
+    height: 55px
+    background-image: url(../img/icons/zigzag1.png)
+    opacity: 0.3
+
+    &_1
+      top: 5%
+      left: 15%
+    &_2
+      top: 50%
+      left: 10%
+      transform: rotate(90deg)
+    &_3
+      top: 10%
+      right: 15%
+    &_4
+      right: 10%
+      top: 50%
+      transform: rotate(240deg)
+
+  &__star
+    width: 30px
+    height: 30px
+    background-image: url(../img/icons/star.svg)
+    opacity: 0.3
+
+    &_1
+      top: 35%
+      left: 20%
+    &_2
+      top: 80%
+      left: 10%
+      transform: rotate(30deg)
+    &_3
+      top: 25%
+      right: 10%
+    &_4
+      right: 8%
+      top: 60%
+      transform: rotate(90deg)
+
+  
+  &__image
+    position: absolute
+    right: 10%
+    bottom: 0
+    width: 410px
+    height: 580px
+    opacity: 0.2
+
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      z-index: 1
+      height: 40%
+      width: 20%
+      background-color: #ecb136
+      box-shadow: 0 0 600px 250px #ecb136
+      transform: translate(-50%, -50%) 
+
+  &__circle
+    position: absolute
+    bottom: -50%
+    left: 60%
+    width: 1000px
+    height: 1000px
+    transform: translateX(-100%)
+    background-color: rgba(#ffffff, 0.1)
+    border-radius: 50%
+    animation-name: zoom-circle
+    animation-duration: 3s
+    animation-iteration-count: infinite
+    animation-play-state: running
+    animation-timing-function: easy-out
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 60%
+      height: 60%
+      border-radius: 50%
+      background-color: rgba(#ffffff, 0.2)
+      transform: translate(-50%, -50%)
+      transform-origin: center center
+  
+  &__wrap
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 300
+    width: 500px
+    overflow: hidden
+    padding: 40px 50px
+    background-color: $orange
+    border-radius: 50px
+    box-shadow: 0 0 20px 5px rgba($accent, 0.4)
+    transform: translate(-50%, -50%)
+
+  &__title
+    margin-bottom: 30px
+    font-family: $font-bold
+    font-size: 24px
+    color: #ffffff
+    text-align: center
+    text-transform: uppercase
+
+.hidden
+  display: none
+
+
+@import "media" // Always at the end

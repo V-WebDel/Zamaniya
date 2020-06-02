@@ -1,0 +1,355 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@media screen and (max-width: 1200px)
+  /* contact-form */
+  .contact-form 
+    &__wrap
+      padding: 40px 20px
+  
+  /* variants */
+  .variants
+    &__list
+      justify-content: space-around
+      margin-top: 60px
+      
+    &__item
+      width: 300px
+      margin: 0 50px
+      margin-bottom: 120px
+
+    &__body
+      position: static
+
+    &__btn
+      margin-bottom: -70px
+
+    &__saving
+      position: relative
+      bottom: -80px
+
+
+  /* advantages */
+  .advantages
+    &__list
+      justify-content: space-around
+
+
+// ≥992px
+@media screen and (max-width: 992px)
+  /* top */
+  .top
+    &__box-shadows
+      right: 0
+      bottom: 0
+      transform: scale(0.7)
+      transform-origin: center bottom
+
+  /* contact-form */
+  .form
+    &__wrap
+      flex-direction: column
+      
+    &__field
+      width: 70%
+      margin-right: 0
+      &_modal
+        width: 100%
+    &__btn
+      width: 70%
+      &_modal
+        width: 100%
+
+  /* variants */
+  .variants
+    &__list
+      justify-content: space-around
+      margin-top: 60px
+      
+    &__item
+      width: 280px
+      margin: 0
+      margin-bottom: 120px
+
+    &__subtitle
+      br:first-child
+        display: none
+
+  /* advantages */
+  .advantages
+    &__list
+      margin-top: 40px
+
+  /* parks */
+  .parks
+    .swiper
+      &-button-prev
+        left: 0%
+      &-button-next
+        right: 0%
+
+  /* bottom */
+  .bottom
+    &__box-shadows
+      left: -26%
+      top: -220px
+
+  /* section modal */
+  .modal
+    &__close
+      top: 30px
+      right: 30px
+      width: 30px
+      height: 30px
+
+    &__image
+      right: 50%
+      bottom: auto
+      top: -20%
+      transform: translateX(50%)
+
+    &__wrap
+      transform: translate(-50%, -40%)
+
+// ≥768px
+@media screen and (max-width: 768px)
+  .main-wrap
+    position: relative
+    background: #d72c93
+    background: linear-gradient(130deg, #d72c93 0, #f3b940 50%, #d8a231)
+
+    &__ball
+      transform: translateX(-50%) scale(0.8)
+      transform-origin: center top
+
+    &__circle
+      &_middle
+        top: 55%
+        left: 150%
+
+  /* header */
+  .header
+    padding-top: 20px
+  .logo
+    width: 160px
+
+  /* top */
+  .top
+    &__box-shadows
+      display: none
+
+    &__star
+      z-index: 11
+      &_2
+        top: 180%
+        left: 80%
+      &_3
+        bottom: -120%
+        right: 80%
+      &_5
+        top: 130%
+        right: 90%
+        height: 50px
+        width: 50px
+      &_7
+        bottom: -100%
+        left: 90%
+      &_8
+        bottom: 20%
+        left: 10%
+        width: 25px
+        height: 25px
+
+    &__point
+      z-index: 11
+      &_1
+        top: 230%
+        left: 20%
+      &_6
+        top: 240%
+        left: 15%
+      &_7
+        top: 270%
+        left: 85%
+      &_12
+        top: 245%
+        left: 20%
+      &_15
+        top: 230%
+        left: 80%
+      &_16
+        top: 260%
+        left: 90%
+
+  .promo
+    &__subtitle
+      font-size: 18px
+      &_big
+        font-size: 30px
+
+    &__title
+      font-size: 16px
+      &_big
+        font-size: 48px
+      &_middle
+        font-size: 22px
+
+  /* contact-form */
+  .contact-form
+    &_top
+      margin-bottom: 30px
+      padding-bottom: 380px
+
+    &__box-shadows
+      display: block
+      position: absolute
+      right: 50%
+      bottom: 0
+      width: 280px
+      height: 390px
+      transform: translateX(50%)
+
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        z-index: 1
+        height: 40%
+        width: 30%
+        background-color: #ecb136
+        box-shadow: 0 0 400px 180px #ecb136
+        transform: translate(-50%, -50%) 
+
+      &::after
+        content: ''
+        position: absolute
+        z-index: 10
+        bottom: 0
+        left: 50%
+        height: 0px
+        width: 100%
+        box-shadow: 0 0 80px 80px #ecb136
+        transform: translateX(-50%)
+
+    &__image
+      position: relative
+      z-index: 2
+      width: 100%
+      height: 100%
+
+  /* variants */
+  .variants
+    position: relative
+    z-index: 10
+
+    &__list
+      align-items: center
+      flex-direction: column
+      margin-bottom: 0
+
+    &__body
+      min-height: 245px
+
+    &__subtitle
+      br:nth-child(2)
+        display: block
+
+  /* bottom */
+  .bottom
+    padding-top: 40px
+
+    .container-relative
+      padding-bottom: 400px
+
+    &__box-shadows
+      top: auto
+      bottom: 0
+      left: 50%
+      width: 120%
+      transform: translateX(-50%)
+
+    &__title
+      margin-bottom: 30px
+      font-size: 24px
+
+    &__subtitle
+      font-size: 18px
+      line-height: 1.4
+
+  /* contact-form */
+  .contact-form
+    &__main-prize
+      font-size: 24px
+      br
+        display: none
+
+  /* attention */
+  .attention
+    &__text
+
+
+// ≥576px
+@media screen and (max-width: 576px)
+  /* top */
+  .top
+    padding-top: 30px
+
+    &__star_8, &__zigzag_2, &__zigzag_1
+        display: none
+    
+    &__star_4
+      width: 30px
+      height: 30px
+
+  /* contact-form */
+  .contact-form
+    &__title
+      margin-bottom: 20px
+      font-size: 22px
+
+    &__wrap
+      padding: 30px 25px
+
+    &__promo-time
+      line-height: 1.2
+
+  .form
+    &__field, &__btn
+      width: 100%
+      font-size: 18px
+
+  /* advantages */
+  .advantages
+    padding-bottom: 40px
+
+    &__subtitle
+      font-size: 24px
+
+    &__btn
+      border-radius: 45px
+
+  /* parks */
+  .parks
+    padding: 40px 0
+
+    &__wrap
+      margin-top: 20px
+
+  /* bottom */
+  .bottom
+    .container-relative
+      padding-bottom: 250px
+
+    &__box-shadows
+      width: 440px
+      transform: translateX(-45%)
+
+  /* section modal */
+  .modal
+    &__wrap
+      width: 300px
+      padding: 30px 20px
